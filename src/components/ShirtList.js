@@ -22,19 +22,19 @@ function ShirtList() {
         <div className="shirtList"> 
             <ul>
                 <li>
-                    <img src={shirtIcon} />
+                    <img src={shirtIcon} alt="shirtIcon"/>
                 </li>
                 <li onClick={() =>updateShirtColor("#B2C7C7","#B2C7C7")}>
-                    <img src={shirtColor1} />
+                    <img src={shirtColor1} alt="shirtColor"/>
                 </li>
                 <li  onClick={() =>updateShirtColor("#88C10F","#88C10F")}>
-                    <img src={shirtColor2} />
+                    <img src={shirtColor2} alt="shirtColor"/>
                 </li>
                 <li onClick={() =>updateShirtColor("#FF1414","#FF1414")}>
-                    <img src={shirtColor3} />
+                    <img src={shirtColor3} alt="shirtColor"/>
                 </li>
-                <li onClick={() =>updateShirtColor("#1C3E8E","#1C3E8E")}>
-                    <img src={shirtColor4} />
+                <li onClick={() =>updateShirtColor("#1C3E8E","#C0C4C7")}>
+                    <img src={shirtColor4} alt="shirtColor"/>
                 </li>
             </ul>
         </div>
