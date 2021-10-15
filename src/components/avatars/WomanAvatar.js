@@ -2,19 +2,27 @@ import React, { useEffect, useState } from 'react';
 
 function WomanAvatar(props) {
     const [skinColor,setSkinColor] = useState("#FCD7B8")
-    const [shirtColor,setShirtColor] = useState("#B2C7C7")
+    const [shirtColor,setShirtColor] = useState({
+        color1 : "#B2C7C7",
+        color2 : "#B2C7C7"
+    });
+
+    useEffect(()=>{
+        if(props.shirtColor.color1 !== "" && props.shirtColor.color2 !== "" && (props.shirtColor.color1 === props.shirtColor.color2)){
+            setShirtColor({
+                color1: props.shirtColor.color1,
+                color2: props.shirtColor.color2
+            })
+        } 
+    },[props.shirtColor]);
 
     useEffect(()=>{
         (props.skinColor) ? setSkinColor(props.skinColor) : setSkinColor("#FCD7B8")
     },[props.skinColor]);
 
-    useEffect(()=>{
-        (props.shirtColor) ? setShirtColor(props.shirtColor) : setShirtColor("#B2C7C7")
-    },[props.shirtColor]);
-
     return (
         <>
-            <svg width="144" height="144" viewBox="0 0 144 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="144" height="144" viewBox="0 0 144 144" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={props.onClick}>
             <g filter="url(#filter0_dd)">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M72.5 140C109.779 140 140 109.779 140 72.5C140 35.2208 109.779 5 72.5 5C35.2208 5 5 35.2208 5 72.5C5 109.779 35.2208 140 72.5 140Z" fill="#DDE1E7"/>
             </g>
@@ -35,7 +43,7 @@ function WomanAvatar(props) {
             <path d="M55.1486 64.2999C55.9197 64.2999 56.5448 63.4941 56.5448 62.4999C56.5448 61.5058 55.9197 60.7 55.1486 60.7C54.3775 60.7 53.7524 61.5058 53.7524 62.4999C53.7524 63.4941 54.3775 64.2999 55.1486 64.2999Z" fill="black"/>
             <path d="M56.146 62.5C56.4764 62.5 56.7443 62.2314 56.7443 61.9C56.7443 61.5687 56.4764 61.3 56.146 61.3C55.8155 61.3 55.5476 61.5687 55.5476 61.9C55.5476 62.2314 55.8155 62.5 56.146 62.5Z" fill="#DDDFE2"/>
             <path d="M71.903 10.5001C40.0901 5.30009 37.4973 51.8001 39.9904 60.2001C41.2869 63.9001 40.4891 67.8001 40.4891 67.8001H43.4809C43.4809 67.8001 43.2814 65.4001 43.6803 63.9001C44.6776 60.1001 47.1707 54.1001 52.7554 44.5001C64.7227 24.1001 72.3019 22.2001 71.7035 19.9001C71.0054 17.7001 72.6011 12.7001 72.6011 12.7001C73.6981 14.5001 72.1024 18.8001 74.3962 21.3001C97.2336 46.3001 101.322 64.1001 101.422 64.5001C101.522 65.0001 101.721 67.7001 101.721 67.7001H104.713C104.713 67.7001 106.109 62.4001 106.01 58.8001C107.605 1.60009 71.903 10.5001 71.903 10.5001Z" fill="#3D2011"/>
-            <path d="M83.2709 101.7C83.1712 101.7 83.1712 101.6 83.0715 101.6C81.2764 105.1 77.1876 107.6 72.4007 107.6C67.6138 107.6 63.525 105.1 61.7299 101.6C61.6302 101.6 61.6302 101.7 61.5305 101.7C53.8515 105.7 45.6739 106.3 49.0646 144.5C70.4062 144.5 74.1958 144.5 95.5373 144.5C99.1275 106.3 90.9499 105.7 83.2709 101.7Z" fill={shirtColor} stroke="black" stroke-width="1.0195" stroke-miterlimit="10"/>
+            <path d="M83.2709 101.7C83.1712 101.7 83.1712 101.6 83.0715 101.6C81.2764 105.1 77.1876 107.6 72.4007 107.6C67.6138 107.6 63.525 105.1 61.7299 101.6C61.6302 101.6 61.6302 101.7 61.5305 101.7C53.8515 105.7 45.6739 106.3 49.0646 144.5C70.4062 144.5 74.1958 144.5 95.5373 144.5C99.1275 106.3 90.9499 105.7 83.2709 101.7Z" fill={shirtColor.color1} stroke="black" stroke-width="1.0195" stroke-miterlimit="10"/>
             <path d="M88.2578 117.4C87.8589 122.4 87.3602 129.9 87.2605 144.5" stroke="black" stroke-width="1.0195" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M56.7449 117.4C57.1438 122.4 57.6424 129.9 57.7421 144.5" stroke="black" stroke-width="1.0195" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M71.7028 61.3999C71.4036 64.2999 69.6085 67.9999 71.7028 68.3999C73.7971 68.7999 75.8913 68.3999 75.8913 68.3999" stroke="black" stroke-width="1.0195" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
