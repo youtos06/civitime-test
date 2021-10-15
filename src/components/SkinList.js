@@ -6,7 +6,7 @@ import skinColor3 from '../assets/color-FCCC84.svg';
 import skinColor4 from '../assets/color-FCD7B8.svg';
 import "../styles/block.css";
 
-function SkinList(props) {
+function SkinList({changeSkinColor}) {
     const[skinColor,setSkinColor] = useState("")
     return (
         <div className="skinList">
@@ -15,16 +15,30 @@ function SkinList(props) {
                     <img src={skinIcon} alt="skinIcon" />
                 </li>
                 <li>
-                    <img src={skinColor4} alt="skinColor" onClick={() => setSkinColor("#533724")} />
+                    <img src={skinColor4} alt="skinColor" onClick={() => {
+                        setSkinColor("#533724");
+                        changeSkinColor(skinColor);}
+                    } 
+                    />
                 </li>
                 <li>
-                    <img src={skinColor2} alt="skinColor" onClick={() => setSkinColor("#E0A39A")} />
+                    <img src={skinColor2} alt="skinColor" onClick={() => {
+                        setSkinColor("#E0A39A");
+                        changeSkinColor(skinColor);}
+                    }  
+                    />
                 </li>
                 <li>
-                    <img src={skinColor3} alt="skinColor" onClick={() => setSkinColor("#FCCC84")} />
+                    <img src={skinColor3} alt="skinColor" onClick={() => {
+                        setSkinColor("#FCCC84");
+                        changeSkinColor(skinColor);}
+                    } />
                 </li>
                 <li>
-                    <img src={skinColor1} alt="skinColor"onClick={() => setSkinColor("#FCD7B8")} />
+                    <img src={skinColor1} alt="skinColor"onClick={() => {
+                        setSkinColor("#FCD7B8");
+                        changeSkinColor(skinColor);}
+                    } />
                 </li>
             </ul>            
         </div>

@@ -5,7 +5,7 @@ import shirtColor2 from '../assets/color-88C10F.svg';
 import shirtColor3 from '../assets/color-FF1414.svg';
 import shirtColor4 from '../assets/color-striped.svg';
 import "../styles/block.css";
-function ShirtList() {
+function ShirtList({changeShirtColorr}) {
     const[shirtColor,setShirtColor] = useState({
         color1: "",
         color2: ""
@@ -17,6 +17,7 @@ function ShirtList() {
             color1: newColor1,
             color2 : newColor2
         });
+        changeShirtColorr(shirtColor)
     };
     return (
         <div className="shirtList"> 
