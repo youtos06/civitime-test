@@ -87,13 +87,13 @@ function AvatarSelector(props) {
     const submit = ()=>{ 
         if(formData.selected==='man'){
             setFormError("");
-            alert("choice : "+formData.selected+"\n"+
+            alert("gender : "+formData.selected+"\n"+
             "Skin Color : "+formData.man.skinColor+"\n"+
             "Shirt Color : Strip 1 : "+formData.man.shirtColor.color1+
                         "\t Strip 2 : "+formData.man.shirtColor.color2);
         }else if(formData.selected==='woman'){
             setFormError("");
-            alert("choice : "+formData.selected+"\n"+
+            alert("gender : "+formData.selected+"\n"+
             "Skin Color : "+formData.woman.skinColor+"\n"+
             "Shirt Color : Strip 1 : "+formData.woman.shirtColor.color1+
                         "\t Strip 2 : "+formData.woman.shirtColor.color2);

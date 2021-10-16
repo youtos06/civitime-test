@@ -1,11 +1,25 @@
-# Test technique intégration civitime
+# Test technique intégration civitime - El Housni Youness
 
-Lancez le projet avec  `npm install && npm run start.`
-## Objectif
+Lancez le projet avec `npm install && npm run start.`
 
-Vous devez réaliser une intégration html / css la plus fidèle possible aux mockups situés dans `src/mockups`.
-L'intégration doit être responsive
+Le project utilise les Hooks de ReactJs , le style est basé sur Css seuelement aucun lib extérieur
 
-## Rendu
+## Errors Handling
 
-Créez un repo publique sur github / gitlab et envoyez le lien par mail à pierre-alexandre.caillat@civitime.com
+State formError : handel error displays
+
+- "Please Select an Avatar before submit" : click Avant Sur Sumbmit il faut Sélectionner un Avatar
+
+- "Please Select one of the Avatars (Man,Woman) Before Selecting a skin Color" : Avant Choix couleur il faut Sélectionner un Avatar
+
+- "Please Select one of the Avatars (Man,Woman) Before Selecting a skin Color" : manque de sélection avatar
+
+- "This Shirt is not avaible for the woman avatar" : Pas de support de choix pour l'avatar sélectionner (woman)
+
+## Event Handling
+
+Click Sur Skin or Shirt Trigger changement sur l'avatar View
+
+## Valider
+
+Clicker sur le button valider : lance alert sur Avatar sélectionner
