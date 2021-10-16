@@ -35,7 +35,9 @@ button{
 
 .container{
     border: 3px solid #7600d5;
-    height: 93%;
+    box-sizing: border-box;
+    border-radius: 7px;
+    height: 100%;
 }
 
 .wrapper{

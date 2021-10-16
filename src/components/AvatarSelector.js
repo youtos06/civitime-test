@@ -103,9 +103,9 @@ function AvatarSelector(props) {
     }
 
     return (
-        <>
-        <NavBar/>
         <div className="container">
+        <NavBar/>
+        
             <p align="center">Lequel de ces deux avatars préférez-vous?</p>
             <div className="wrapper">
                 
@@ -138,7 +138,6 @@ function AvatarSelector(props) {
             </div>
             
         </div>
-        </>
     );
 }
 
