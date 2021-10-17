@@ -23,3 +23,9 @@ Click Sur Skin or Shirt Trigger changement sur l'avatar View
 ## Valider
 
 Clicker sur le button valider : lance alert sur Avatar sélectionner
+
+## Docker
+
+Build docker image : docker build -t test-ui-civitime .
+
+Run : docker run -p 3001:3000 test-ui-civitime
